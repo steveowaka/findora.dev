@@ -1,0 +1,59 @@
+:root {
+  --primary: #2864e8;
+  --dark: #172650;
+  --muted: #667085;
+  --background: #f5f8ff;
+  --border: #e1e6ef;
+}
+
+
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 6%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.nav-bar a:hover {
+    color: var(--primary);
+}
+
+.btn {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--primary);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.hero {
+   background:var(--background);
+   text-align: center;
+   padding: 70px 21px 90px;
+}
+
+.hero h1 {
+  line-height: 1.15;
+  max-width: 800px;
+  margin: 0 auto 18px;
+}
