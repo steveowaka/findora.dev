@@ -23,6 +23,10 @@
     color: var(--dark);
 }
 
+.logo span {
+    color: var(--primary);
+}
+
 nav {
     display: flex;
     gap: 24px;
@@ -56,4 +60,15 @@ nav {
   line-height: 1.15;
   max-width: 800px;
   margin: 0 auto 18px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto;
 }
