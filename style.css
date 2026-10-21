@@ -4,6 +4,7 @@
   --muted: #667085;
   --background: #f5f8ff;
   --border: #e1e6ef;
+  --soft-blue: #eaf1ff;
 }
 
 * {
@@ -24,6 +25,7 @@ body {
     gap: 20px;
     height: 70px;
     padding: 18px 6%;
+    background-color: #ffffff;
     border-bottom: 1px solid var(--border);
 }
 
@@ -55,7 +57,9 @@ nav {
 }
 
 .nav-bar a.active {
-    border-bottom-color: var(--primary);
+    border-bottom: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
 }
 
 .nav-search {
@@ -67,8 +71,6 @@ nav {
     font: inherit;
     font-size: 14px;
 }
-
-
 
 .hero {
    background:var(--background);
@@ -259,7 +261,7 @@ nav {
     font-weight: 600;
 }
 
-.details-links {
+.details-link {
     font-weight: 600;
     text-decoration: none;
     color: var(--primary);
