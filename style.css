@@ -6,13 +6,23 @@
   --border: #e1e6ef;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--dark);
+    background: white;
+}
 
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    height: 70px;
     padding: 18px 6%;
     border-bottom: 1px solid var(--border);
 }
@@ -30,6 +40,8 @@
 nav {
     display: flex;
     gap: 24px;
+    height: 100%;
+    margin-left: 32px;
 }
 
 .nav-bar a {
@@ -37,27 +49,38 @@ nav {
     color: var(--muted);
 }
 
-.nav-bar a:hover {
+.nav-bar a:hover,
+.nav-bar a:active {
     color: var(--primary);
 }
 
-.btn {
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: var(--primary);
-    padding: 10px 15px;
-    cursor: pointer;
+.nav-bar a.active {
+    border-bottom-color: var(--primary);
 }
+
+.nav-search {
+    width: 260px;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+}
+
+
 
 .hero {
    background:var(--background);
    text-align: center;
    padding: 70px 21px 90px;
+   border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
   line-height: 1.15;
+  font-size: 56px;
+  font-weight: 700;
   max-width: 800px;
   margin: 0 auto 18px;
 }
@@ -71,4 +94,173 @@ nav {
     color: var(--muted);
     max-width: 500px;
     margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.results {
+    background: var(--background);
+    padding: 48px 48px 80px;
+}
+
+.container {
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 9px 9px 9px 25px;
+    background: white;
+    border: 1px solid #9ca3af;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font: inherit;
+    font-size: 16px;
+}
+
+.divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border);
+}
+
+.search-button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 999px;
+    background: var(--primary);
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 40px 0 20px;
+}
+
+.results-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.sort {
+    font-size: 15px;
+     color: var(--muted);
+}
+
+.sort strong {
+    color: var(--dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tag.internship {
+    background: #e8ecff; 
+    color: #1e2a9e; 
+}
+
+.tag.scholarship {
+    background: #ffebd2; 
+    color: #7a3e00; 
+}
+
+.bookmark {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: #f1f2f4;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.bookmark.saved {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+.card h3 {
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.org {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;      
+    padding-top: 24px;
+}
+
+.deadline {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details-links {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary);
 }
