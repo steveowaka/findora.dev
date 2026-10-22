@@ -1,5 +1,24 @@
-
 {
-  "savedJobs": [],
-  "managedJobs": []
+  "savedJobs": [
+    {
+      "remoteId": "1137548",
+      "position": "Risk Analyst",
+      "company": "Pavago",
+      "location": "Location not specified",
+      "url": "https://remoteOK.com/remote-jobs/remote-risk-analyst-pavago-1137548",
+      "source": "Remote OK",
+      "id": "X9IuM0suucE"
+    },
+    {
+      "remoteId": "1137541",
+      "position": "Key Account Manager Danish Market Native Speaker Copenhagen",
+      "company": "Packmatic GmbH",
+      "location": "Copenhagen",
+      "url": "https://remoteOK.com/remote-jobs/remote-key-account-manager-danish-market-native-speaker-copenhagen-packmatic-gmbh-1137541",
+      "source": "Remote OK",
+      "id": "TzqttJqAvP4"
+    }
+  ],
+  "managedJobs": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

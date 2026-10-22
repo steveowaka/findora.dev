@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>findora.dev</title>
     <link rel="stylesheet" href="saved.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
 </head>
 <body>
     <header class="nav-bar">
@@ -33,7 +32,15 @@
                     <h1>Saved opportunities</h1>
                     <p>Everything you've bookmarked, in one place. Don't miss a deadline.</p>
                 </div>
-                <p class="saved-meta">3 saved · Sorted by deadline</p>
+                <p class="saved-meta">3 saved</p>
             </div>
+
+                <p id="saved-status" role="status" aria-live="polite">
+                     Loading saved opportunities...
+                 </p>
+
+            <div id="saved-jobs-container"></div>
+
+<script type="module" src="./saved.js"></script>
 </body>
 </html>
