@@ -266,3 +266,81 @@ nav {
     text-decoration: none;
     color: var(--primary);
 }
+
+
+
+/* remoteok live listing */
+
+.remote-jobs-section {
+    max-width: 1276px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.remote-jobs-section h2 {
+    margin-bottom: 12px;
+    color: #172b4d;
+    font-size: 28px;
+}
+
+#status-message {
+    margin: 16px 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+#jobs-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+#jobs-container .job-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e1e8f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(23, 43, 77, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#jobs-container .job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(23, 43, 77, 0.1);
+}
+
+#jobs-container .job-card h3 {
+    margin: 0;
+    color: #172b4d;
+    font-size: 18px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+#jobs-container .job-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+#jobs-container .job-card a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 9px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#jobs-container .job-card a:hover {
+    background: #2452bd;
+}
