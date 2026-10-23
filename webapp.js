@@ -233,6 +233,12 @@ async function displayJobs() {
         await toggleSavedJob(job, bookmarkButton);
       });
 
+        if (isJobSaved(job)) {
+        bookmarkButton.classList.add("saved");
+        bookmarkButton.setAttribute("aria-label", "Remove from saved");
+        bookmarkButton.setAttribute("aria-pressed", "true");
+        }
+
         bookmarkButton.innerHTML = `
         <svg
             width="20"

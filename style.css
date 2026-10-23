@@ -27,6 +27,8 @@ body {
     padding: 18px 6%;
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -225,7 +227,7 @@ nav {
 }
 
 .bookmark.saved {
-    background: var(--primary-soft);
+    background: var(--soft-blue);
     color: var(--primary);
 }
 
@@ -339,6 +341,7 @@ nav {
     font-size: 14px;
     font-weight: 600;
     color: var(--primary);
+    padding-left: 1px;
 }
 
 #jobs-container .job-card a:hover {
@@ -362,6 +365,10 @@ nav {
   height: 40px;
   color: #64748b;
   cursor: pointer;
+}
+
+#jobs-container .bookmark.saved {
+  color: #2864e8;
 }
 
 #jobs-container .bookmark:hover {

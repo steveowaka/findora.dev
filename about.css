@@ -27,6 +27,8 @@ body {
     padding: 18px 6%;
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
 }
 
 .logo {
