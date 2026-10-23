@@ -1,9 +1,14 @@
-
 {
+  "type": "module",
   "scripts": {
-    "start:api": "json-server --watch db.json --port 3000"
+    "start:api": "json-server --watch db.json --port 3000",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.15"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2"
   }
 }
