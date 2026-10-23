@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,65 +8,78 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-        <header class="nav-bar">
 
-             <div class="logo">
-                <p> 🎓 findora<span>.dev</span></p>
-            </div>
+    <header class="nav-bar">
 
-            <nav>
-                <a href="index.html" class="active">Explore</a>
-                <a href="saved.html">Saved</a>
-                <a href="about.html">About</a>
-            </nav>
-               
-             <input class="nav-search" type="text" placeholder="Search opportunities...">
-            
-        </header>
+        <div class="logo">
+            <p> 🎓 findora<span>.dev</span></p>
+        </div>
 
-          <main>
+        <nav>
+            <a href="index.html" class="active">Explore</a>
+            <a href="saved.html">Saved</a>
+            <a href="about.html">About</a>
+        </nav>
 
-            <section class="hero">
-                <h1>Find your next <span>opportunity.</span></h1>
-                <p>Discover internships, scholarships, and career opportunities to help you take your next step.</p>
-            </section>
-          
+        <input class="nav-search" type="text" placeholder="Search opportunities...">
 
-             <section class="results">
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Find your next <span>opportunity.</span></h1>
+            <p>Discover internships, scholarships, and career opportunities to help you take your next step.</p>
+        </section>
+
+
+        <section class="results">
             <div class="container">
- 
+
                 <form class="search-bar" id="job-search-form">
                     <label class="search-field">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="M20 20l-3.5-3.5" />
+                        </svg>
                         <input type="text" id="keyword-input" placeholder="Title, organization, or keyword">
                     </label>
                     <span class="divider"></span>
                     <label class="search-field">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" />
+                            <circle cx="12" cy="10" r="2.5" />
+                        </svg>
                         <input type="text" id="location-input" placeholder='City, county, or "remote"'>
                     </label>
                     <button class="search-button" type="submit">Search</button>
                 </form>
 
-                  <div class="results-header">
+                <div class="results-header">
                     <h2>24 opportunities</h2>
                     <p class="sort">Sort by <strong>Latest</strong></p>
                 </div>
- 
+
                 <div class="grid">
- 
+
                     <article class="card">
                         <div class="card-top">
                             <span class="tag internship">Internship</span>
                             <button class="bookmark saved" aria-label="Remove from saved">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>Junior Frontend Developer Intern</h3>
                         <p class="org">Example Tech · Remote</p>
-                        <p class="description">Gain practical experience building modern web applications with a supportive team.</p>
+                        <p class="description">Gain practical experience building modern web applications with a
+                            supportive team.</p>
                         <div class="card-footer">
                             <span class="deadline">Deadline: 15 December 2026</span>
                             <a class="details-link" href="#">View Details</a>
@@ -77,23 +91,30 @@
                         <div class="card-top">
                             <span class="tag scholarship">Scholarship</span>
                             <button class="bookmark saved" aria-label="Remove from saved">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>Technology Scholarship Programme</h3>
                         <p class="org">Future Scholars Foundation · Kenya</p>
-                        <p class="description">Financial support for eligible technology students to pursue their education goals.</p>
+                        <p class="description">Financial support for eligible technology students to pursue their
+                            education goals.</p>
                         <div class="card-footer">
                             <span class="deadline">Deadline: 20 December 2026</span>
                             <a class="details-link" href="#">View Details</a>
                         </div>
                     </article>
- 
+
                     <article class="card">
                         <div class="card-top">
                             <span class="tag internship">Internship</span>
                             <button class="bookmark saved" aria-label="Remove from saved">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>UI/UX Design Intern</h3>
@@ -104,12 +125,15 @@
                             <a class="details-link" href="#">View Details</a>
                         </div>
                     </article>
- 
+
                     <article class="card">
                         <div class="card-top">
                             <span class="tag scholarship">Scholarship</span>
                             <button class="bookmark" aria-label="Save opportunity">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>Software Engineering Scholarship</h3>
@@ -120,12 +144,15 @@
                             <a class="details-link" href="#">View Details</a>
                         </div>
                     </article>
- 
+
                     <article class="card">
                         <div class="card-top">
                             <span class="tag internship">Internship</span>
                             <button class="bookmark" aria-label="Save opportunity">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>Data Analyst Intern</h3>
@@ -136,40 +163,45 @@
                             <a class="details-link" href="#">View Details</a>
                         </div>
                     </article>
- 
+
                     <article class="card">
                         <div class="card-top">
                             <span class="tag scholarship">Scholarship</span>
                             <button class="bookmark" aria-label="Save opportunity">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M6 3h12v18l-6-4-6 4z" />
+                                </svg>
                             </button>
                         </div>
                         <h3>Women in STEM Scholarship</h3>
                         <p class="org">Bright Minds Trust · Kenya</p>
-                        <p class="description">Tuition support and mentoring for women studying science and engineering.</p>
+                        <p class="description">Tuition support and mentoring for women studying science and engineering.
+                        </p>
                         <div class="card-footer">
                             <span class="deadline">Deadline: 14 February 2027</span>
                             <a class="details-link" href="#">View Details</a>
                         </div>
                     </article>
- 
+
                 </div>
             </div>
         </section>
 
-<!-- sample -->
+        <!-- sample -->
         <section class="remote-jobs-section">
-  <h2>Latest Remote Jobs</h2>
+            <h2>Latest Remote Jobs</h2>
 
-  <p id="status-message" role="status" aria-live="polite">
-    Loading remote jobs...
-  </p>
+            <p id="status-message" role="status" aria-live="polite">
+                Loading remote jobs...
+            </p>
 
-  <div id="jobs-container"></div>
-</section>
+            <div id="jobs-container"></div>
+        </section>
 
     </main>
-           
-<script type="module" src="./webapp.js"></script>
+
+    <script type="module" src="./webapp.js"></script>
 </body>
+
 </html>
