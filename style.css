@@ -375,3 +375,88 @@ nav {
 #jobs-container .bookmark.saved svg {
     fill: currentColor;
 }
+
+/* responsiveness on  Tablet screen */
+@media (max-width: 900px) {
+  #jobs-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+}
+
+/* responsiveness on  Phone  screen */
+@media (max-width: 600px) {
+  
+  .nav-bar {
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    padding: 12px 5%;
+    gap: 8px 16px;
+  }
+
+  nav {
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  
+  .hero {
+    padding: 48px 20px 56px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* search bar: stack the fields vertically */
+  .container {
+    padding: 0 16px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 24px;
+  }
+
+  .search-field {
+    flex: none;
+    padding: 6px 0;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  /* job cards */
+  .remote-jobs-section {
+    padding: 0 16px;
+  }
+
+  .remote-jobs-section h2 {
+    font-size: 24px;
+  }
+
+  #jobs-container {
+    grid-template-columns: 1fr;
+  }
+}

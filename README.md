@@ -2,6 +2,7 @@ Findora.dev — Remote Opportunity Finder
 
 Findora.dev is a web application that helps users discover remote job opportunities and save interesting listings for later. It integrates the Remote OK API to display remote jobs and uses JSON Server to manage saved opportunities.
 
+This project is licensed under the MIT License.
 
 TABLE OF CONTENT
 
@@ -182,10 +183,6 @@ Generate a coverage report with:
 
 npm run test:coverage
 
-The current tests cover managed opportunity replacement using PUT, application status updates using PATCH, and rejection of invalid application statuses.
-
-The project requirement specifies a minimum of 50% JavaScript test coverage. The full application coverage must be verified before claiming that this target has been achieved.
-
 Design
 
 The user interface was designed using Figma before implementation.
@@ -202,38 +199,9 @@ A cohesive blue-and-neutral color scheme.
 
 Responsive layouts for different screen sizes.
 
-Figma wireframe: 
-
-Deployment
-
-The project is intended to be deployed using a suitable frontend and backend hosting platform.
+Figma wireframe: https://www.figma.com/proto/ZF8EnvRKdGSVSVlII19VrN/findora.dev?node-id=0-1&t=Ae56vbmR1DKrQJqV-1
 
 Live application: 
 
-Backend API: 
+GitHub repository: https://github.com/steveowaka/findora.dev
 
-GitHub repository: 
-
-Before deployment, configure the frontend to use the deployed JSON Server API instead of http://localhost:3000. Verify that the backend supports persistent data storage and that saving or removing opportunities works on the live application.
-
-Future Improvements
-
-Potential improvements include:
-
-Adding more advanced search and filtering options.
-
-Introducing application status management through the user interface.
-
-Improving automated test coverage across all JavaScript modules.
-
-Enhancing accessibility and responsive behavior.
-
-Adding further validation and more detailed user feedback.
-
-License
-
-This project is distributed under the MIT License if the repository's LICENSE file specifies that license.
-
-See the LICENSE file for the full terms.
-
-Developed as a web development project demonstrating API integration, RESTful operations, modular JavaScript, automated testing, and user interface design.

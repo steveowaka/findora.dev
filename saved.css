@@ -205,3 +205,51 @@ nav {
   height: 20px;
 }
 
+@media (max-width: 900px) {
+  #saved-jobs-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .saved-main {
+    padding: 48px 32px 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    padding: 12px 5%;
+    gap: 8px 16px;
+  }
+
+  nav {
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .saved-main {
+    padding: 32px 16px 48px;
+  }
+
+  /* title and count stack instead of squeezing side by side */
+  .saved-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .saved-header h1 {
+    font-size: 30px;
+  }
+
+  #saved-jobs-container {
+    grid-template-columns: 1fr;
+  }
+}
