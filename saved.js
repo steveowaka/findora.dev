@@ -107,3 +107,4 @@ async function deleteSavedJob(id, card) {
 
 
 loadSavedJobs();
+export { loadSavedJobs, deleteSavedJob };

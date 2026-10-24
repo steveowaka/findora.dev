@@ -1,10 +1,10 @@
 :root {
-  --primary: #2864e8;
-  --dark: #172650;
-  --muted: #667085;
-  --background: #f5f8ff;
-  --border: #e1e6ef;
-  --soft-blue: #eaf1ff;
+    --primary: #2864e8;
+    --dark: #172650;
+    --muted: #667085;
+    --background: #f5f8ff;
+    --border: #e1e6ef;
+    --soft-blue: #eaf1ff;
 }
 
 * {
@@ -29,6 +29,7 @@ body {
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 
 .logo {
@@ -64,29 +65,20 @@ nav {
     padding-bottom: 4px;
 }
 
-.nav-search {
-    width: 260px;
-    height: 44px;
-    padding: 0 15px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font: inherit;
-    font-size: 14px;
-}
 
 .hero {
-   background:var(--background);
-   text-align: center;
-   padding: 70px 21px 90px;
-   border-bottom: 1px solid var(--border);
+    background: var(--background);
+    text-align: center;
+    padding: 70px 21px 90px;
+    border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
-  line-height: 1.15;
-  font-size: 56px;
-  font-weight: 700;
-  max-width: 800px;
-  margin: 0 auto 18px;
+    line-height: 1.15;
+    font-size: 56px;
+    font-weight: 700;
+    max-width: 800px;
+    margin: 0 auto 18px;
 }
 
 .hero h1 span {
@@ -102,10 +94,10 @@ nav {
     line-height: 1.7;
 }
 
-.results {
+/* .results {
     background: var(--background);
     padding: 48px 48px 80px;
-}
+} */
 
 .container {
     max-width: 1184px;
@@ -171,7 +163,7 @@ nav {
 
 .sort {
     font-size: 15px;
-     color: var(--muted);
+    color: var(--muted);
 }
 
 .sort strong {
@@ -207,13 +199,13 @@ nav {
 }
 
 .tag.internship {
-    background: #e8ecff; 
-    color: #1e2a9e; 
+    background: #e8ecff;
+    color: #1e2a9e;
 }
 
 .tag.scholarship {
-    background: #ffebd2; 
-    color: #7a3e00; 
+    background: #ffebd2;
+    color: #7a3e00;
 }
 
 .bookmark {
@@ -254,7 +246,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;      
+    margin-top: auto;
     padding-top: 24px;
 }
 
@@ -351,35 +343,35 @@ nav {
 /* bookmark */
 
 #jobs-container .job-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 #jobs-container .bookmark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #64748b;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #64748b;
+    cursor: pointer;
 }
 
 #jobs-container .bookmark.saved {
-  color: #2864e8;
+    color: #2864e8;
 }
 
 #jobs-container .bookmark:hover {
-  background: #f0f4ff;
-  color: #2864e8;
+    background: #f0f4ff;
+    color: #2864e8;
 }
 
 #jobs-container .bookmark.saved {
-  color: #2864e8;
+    color: #2864e8;
 }
 
 #jobs-container .bookmark.saved svg {
-  fill: currentColor;
+    fill: currentColor;
 }

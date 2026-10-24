@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,26 @@
     <link rel="stylesheet" href="saved.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="nav-bar">
 
-             <div class="logo">
-                <p> 🎓 findora<span>.dev</span></p>
-            </div>
+        <div class="logo">
+            <p> 🎓 findora<span>.dev</span></p>
+        </div>
 
-            <nav>
-                <a href="index.html">Explore</a>
-                <a href="saved.html" class="active">Saved</a>
-                <a href="about.html">About</a>
-            </nav>
-               
-             <input class="nav-search" type="text" placeholder="Search opportunities...">
-            
-        </header>
-        
-        <main class="saved-main">
+        <nav>
+            <a href="index.html">Explore</a>
+            <a href="saved.html" class="active">Saved</a>
+            <a href="about.html">About</a>
+        </nav>
+
+
+    </header>
+
+    <main class="saved-main">
         <div class="container">
- 
+
             <div class="saved-header">
                 <div>
                     <h1>Saved opportunities</h1>
@@ -35,12 +36,15 @@
                 <p class="saved-meta">Loading saved opportunities...</p>
             </div>
 
-                <p id="saved-status" role="status" aria-live="polite">
-                     Loading saved opportunities...
-                 </p>
+            <p id="saved-status" role="status" aria-live="polite">
+                Loading saved opportunities...
+            </p>
 
             <div id="saved-jobs-container"></div>
+        </div>
+    </main>
 
-<script type="module" src="./saved.js"></script>
+    <script type="module" src="./saved.js"></script>
+
 </body>
 </html>
