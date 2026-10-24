@@ -2,6 +2,7 @@ Findora.dev — Remote Opportunity Finder
 
 Findora.dev is a web application that helps users discover remote job opportunities and save interesting listings for later. It integrates the Remote OK API to display remote jobs and uses JSON Server to manage saved opportunities.
 
+This project is licensed under the MIT License.
 
 TABLE OF CONTENT
 
