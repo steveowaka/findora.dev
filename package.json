@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "start:api": "json-server --watch db.json --port 3000",
+    "start:api": "json-server db.json --host 0.0.0.0 --port ${PORT:-3000}",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
@@ -9,6 +9,19 @@
     "json-server": "^1.0.0-beta.15"
   },
   "devDependencies": {
-    "jest": "^30.5.2"
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "api.js",
+      "managedjobs.js",
+      "webapp.js",
+      "saved.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

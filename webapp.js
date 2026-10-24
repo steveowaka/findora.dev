@@ -92,8 +92,8 @@ async function toggleSavedJob(job, bookmarkButton) {
 
 
 function filterJobs() {
-    const keyword = keywordInput.value.trim().toLowerCase();
-    const location = locationInput.value.trim().toLowerCase();
+  const keyword = keywordInput.value.trim().toLowerCase();
+  const location = locationInput.value.trim().toLowerCase();
 
   return allJobs.filter((job) => {
     const title = (job.position || "").toLowerCase();
@@ -135,7 +135,7 @@ function displayFilteredJobs(jobs) {
 
     const cardTop = document.createElement("div");
     cardTop.className = "job-card-top";
-// svg
+    // svg
     const bookmarkButton = document.createElement("button");
     bookmarkButton.className = "bookmark";
     bookmarkButton.type = "button";
@@ -143,15 +143,15 @@ function displayFilteredJobs(jobs) {
     bookmarkButton.setAttribute("aria-pressed", "false");
 
     bookmarkButton.addEventListener("click", async () => {
-  await toggleSavedJob(job, bookmarkButton);
- });
+      await toggleSavedJob(job, bookmarkButton);
+    });
 
 
     if (isJobSaved(job)) {
-    bookmarkButton.classList.add("saved");
-    bookmarkButton.setAttribute("aria-label", "Remove from saved");
-    bookmarkButton.setAttribute("aria-pressed", "true");
-  }
+      bookmarkButton.classList.add("saved");
+      bookmarkButton.setAttribute("aria-label", "Remove from saved");
+      bookmarkButton.setAttribute("aria-pressed", "true");
+    }
 
 
     bookmarkButton.innerHTML = `
@@ -218,28 +218,28 @@ async function displayJobs() {
     jobs.forEach((job) => {
       const card = document.createElement("article");
       card.className = "job-card";
-    // svg
+      // svg
 
-        const cardTop = document.createElement("div");
-        cardTop.className = "job-card-top";
+      const cardTop = document.createElement("div");
+      cardTop.className = "job-card-top";
 
-        const bookmarkButton = document.createElement("button");
-        bookmarkButton.className = "bookmark";
-        bookmarkButton.type = "button";
-        bookmarkButton.setAttribute("aria-label", "Save opportunity");
-        bookmarkButton.setAttribute("aria-pressed", "false");
+      const bookmarkButton = document.createElement("button");
+      bookmarkButton.className = "bookmark";
+      bookmarkButton.type = "button";
+      bookmarkButton.setAttribute("aria-label", "Save opportunity");
+      bookmarkButton.setAttribute("aria-pressed", "false");
 
-        bookmarkButton.addEventListener("click", async () => {
+      bookmarkButton.addEventListener("click", async () => {
         await toggleSavedJob(job, bookmarkButton);
       });
 
-        if (isJobSaved(job)) {
+      if (isJobSaved(job)) {
         bookmarkButton.classList.add("saved");
         bookmarkButton.setAttribute("aria-label", "Remove from saved");
         bookmarkButton.setAttribute("aria-pressed", "true");
-        }
+      }
 
-        bookmarkButton.innerHTML = `
+      bookmarkButton.innerHTML = `
         <svg
             width="20"
             height="20"
@@ -261,12 +261,12 @@ async function displayJobs() {
 
       const location = document.createElement("p");
       location.textContent = job.location
-      ? `Location: ${job.location}`
-    : "Location not specified";
+        ? `Location: ${job.location}`
+        : "Location not specified";
 
-    //   const jobType = document.createElement("span");
-    //   jobType.className = "job-type";
-    //   jobType.textContent = "Remote Job";
+      //   const jobType = document.createElement("span");
+      //   jobType.className = "job-type";
+      //   jobType.textContent = "Remote Job";
 
 
       const link = document.createElement("a");
@@ -296,3 +296,12 @@ async function initializeJobs() {
 }
 
 initializeJobs();
+export {
+  loadSavedJobs,
+  isJobSaved,
+  toggleSavedJob,
+  filterJobs,
+  displayFilteredJobs,
+  displayJobs,
+  initializeJobs
+};

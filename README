@@ -1,0 +1,239 @@
+Findora.dev — Remote Opportunity Finder
+
+Findora.dev is a web application that helps users discover remote job opportunities and save interesting listings for later. It integrates the Remote OK API to display remote jobs and uses JSON Server to manage saved opportunities.
+
+
+TABLE OF CONTENT
+
+1.Project Overview
+2.Objectives
+3.Features
+4.Technologies Used
+5.Project Structure
+6.Getting Started
+7.API Integration
+8.Testing
+9.Design
+10.Deployment
+11.Future Improvements
+12.License
+
+
+PROJECT OVERVIEW
+
+Finding relevant remote opportunities can be challenging when listings are spread across different platforms. Findora.dev provides a simple interface for exploring remote jobs, viewing job details, and bookmarking opportunities that users want to revisit.
+
+The project demonstrates frontend development, REST API integration, JavaScript modularization, data persistence, automated testing, and version control.
+
+
+OBJECTIVES
+
+1.Integrate an external API to retrieve remote job listings.
+2.Build a user-friendly interface for browsing opportunities.
+3.Allow users to save and remove bookmarked opportunities.
+4.Use JSON Server as a mock REST API backend.
+5.Demonstrate CRUD operations using HTTP methods.
+6.Apply modular JavaScript and automated testing.
+7.Practice GitHub project management and deployment workflows.
+
+FEATURES 
+
+1.Explore opportunities: Browse remote job listings retrieved from Remote OK.
+2.Search opportunities: Filter listings using available search fields.
+3.Bookmark opportunities: Save interesting jobs for later.
+4.Saved opportunities: View and remove bookmarked listings.
+5.Job details: Follow the provided link to view the original job listing.
+6.API communication: Retrieve and manage application data using HTTP requests.
+7.Error handling: Display feedback when API operations fail.
+8.Responsive interface: Adapt the layout for different screen sizes.
+
+TECHNOLOGIES USED 
+
+HTML5
+CSS3
+JavaScript (ES Modules)
+Remote OK API
+JSON Server
+Jest
+Git
+GitHub
+Figma
+
+
+PROJECT STRUCTURE 
+
+-----findora.dev/
+            --index.html
+            --about.html
+            --saved.html
+            --style.css
+            --about.css
+            --saved.css
+            --api.js
+            --saved.js
+            --managed.js
+            --db.json
+            --package.json
+            --package-lock.json
+------tests
+        --managedjobs.test.js
+
+
+        Getting Started
+
+Prerequisites
+
+Make sure you have installed:
+
+Node.js
+
+npm
+
+Git
+
+Visual Studio Code or another code editor
+
+1. Clone the repository
+
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd findora.dev
+
+Replace YOUR_GITHUB_REPOSITORY_URL with your GitHub repository URL.
+
+2. Install dependencies
+
+npm install
+
+3. Start JSON Server
+
+npm run start:api
+
+The local API should be available at:
+
+http://localhost:3000
+
+The saved opportunities endpoint is:
+
+http://localhost:3000/savedJobs
+
+The managed opportunities endpoint is:
+
+http://localhost:3000/managedJobs
+
+Keep the terminal running while using the local API.
+
+4. Run the frontend
+
+Open index.html using VS Code Live Server or another local static web server.
+
+The frontend must be able to reach JSON Server at http://localhost:3000 for local data operations.
+
+API Integration
+
+External API
+
+Findora.dev retrieves remote job listings from:
+
+https://remoteok.com/api
+
+The API integration is implemented in api.js.
+
+Local REST API
+
+JSON Server provides the backend endpoints used to manage application data.
+
+HTTP method
+
+Purpose
+
+GET
+
+Retrieve saved or managed opportunities
+
+POST
+
+Create a new saved or managed opportunity
+
+PUT
+
+Replace an existing managed opportunity
+
+PATCH
+
+Update selected fields, such as application status
+
+DELETE
+
+Remove a saved or managed opportunity
+
+The project uses db.json as its local data store.
+
+Note: JSON Server is used as a mock backend for this project. A deployed version requires a publicly accessible backend URL and persistent storage configured for the hosting platform.
+
+Testing
+
+Jest is used for automated testing.
+
+Run the tests with:
+
+npm test
+
+Generate a coverage report with:
+
+npm run test:coverage
+
+The current tests cover managed opportunity replacement using PUT, application status updates using PATCH, and rejection of invalid application statuses.
+
+The project requirement specifies a minimum of 50% JavaScript test coverage. The full application coverage must be verified before claiming that this target has been achieved.
+
+Design
+
+The user interface was designed using Figma before implementation.
+
+The design focuses on:
+
+Clear navigation between Explore, Saved, and About.
+
+Consistent opportunity cards.
+
+Readable typography and spacing.
+
+A cohesive blue-and-neutral color scheme.
+
+Responsive layouts for different screen sizes.
+
+Figma wireframe: 
+
+Deployment
+
+The project is intended to be deployed using a suitable frontend and backend hosting platform.
+
+Live application: 
+
+Backend API: 
+
+GitHub repository: 
+
+Before deployment, configure the frontend to use the deployed JSON Server API instead of http://localhost:3000. Verify that the backend supports persistent data storage and that saving or removing opportunities works on the live application.
+
+Future Improvements
+
+Potential improvements include:
+
+Adding more advanced search and filtering options.
+
+Introducing application status management through the user interface.
+
+Improving automated test coverage across all JavaScript modules.
+
+Enhancing accessibility and responsive behavior.
+
+Adding further validation and more detailed user feedback.
+
+License
+
+This project is distributed under the MIT License if the repository's LICENSE file specifies that license.
+
+See the LICENSE file for the full terms.
+
+Developed as a web development project demonstrating API integration, RESTful operations, modular JavaScript, automated testing, and user interface design.
