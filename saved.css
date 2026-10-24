@@ -165,91 +165,91 @@ nav {
 
 /* Match the Explore page cards */
 #saved-jobs-container .job-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  min-width: 0;
-  padding: 24px;
-  background: #fff;
-  border: 1px solid #e1e8f5;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(23, 43, 77, 0.05);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #e1e8f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(23, 43, 77, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 
 
 /* Bookmark button */
 #saved-jobs-container .bookmark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: none;
-  border-radius: 12px;
-  background: #f1f3f5;
-  color: #718096;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    background: #f1f3f5;
+    color: #718096;
+    cursor: pointer;
 }
 
 #saved-jobs-container .bookmark.saved {
-  background: #eaf1ff;
-  color: #2864e8;
+    background: #eaf1ff;
+    color: #2864e8;
 }
 
 #saved-jobs-container .bookmark svg {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 900px) {
-  #saved-jobs-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    #saved-jobs-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  .saved-main {
-    padding: 48px 32px 64px;
-  }
+    .saved-main {
+        padding: 48px 32px 64px;
+    }
 }
 
 @media (max-width: 600px) {
-  .nav-bar {
-    height: auto;
-    min-height: 70px;
-    flex-wrap: wrap;
-    padding: 12px 5%;
-    gap: 8px 16px;
-  }
+    .nav-bar {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 12px 5%;
+        gap: 8px 16px;
+    }
 
-  nav {
-    margin-left: 0;
-    gap: 16px;
-  }
+    nav {
+        margin-left: 0;
+        gap: 16px;
+    }
 
-  .logo {
-    font-size: 20px;
-  }
+    .logo {
+        font-size: 20px;
+    }
 
-  .saved-main {
-    padding: 32px 16px 48px;
-  }
+    .saved-main {
+        padding: 32px 16px 48px;
+    }
 
-  /* title and count stack instead of squeezing side by side */
-  .saved-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
+    /* title and count stack instead of squeezing side by side */
+    .saved-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
 
-  .saved-header h1 {
-    font-size: 30px;
-  }
+    .saved-header h1 {
+        font-size: 30px;
+    }
 
-  #saved-jobs-container {
-    grid-template-columns: 1fr;
-  }
+    #saved-jobs-container {
+        grid-template-columns: 1fr;
+    }
 }

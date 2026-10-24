@@ -14,77 +14,77 @@ document.body.innerHTML = `
 await import("../saved.js");
 
 const flushPromises = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 0));
+    await new Promise((resolve) => setTimeout(resolve, 0));
 };
 
 describe("Saved jobs page", () => {
-  beforeEach(() => {
-    document.querySelector("#saved-jobs-container").replaceChildren();
-    document.querySelector("#saved-status").textContent = "";
-    document.querySelector(".saved-meta").textContent = "";
-    mockFetch.mockReset();
-    jest.restoreAllMocks();
-  });
-
-  test("displays saved jobs returned by the API", async () => {
-    mockFetch.mockResolvedValue({
-      ok: true,
-      json: async () => [
-        {
-          id: "1",
-          position: "Frontend Developer",
-          company: "Example Ltd",
-          url: "https://example.com/job"
-        }
-      ]
+    beforeEach(() => {
+        document.querySelector("#saved-jobs-container").replaceChildren();
+        document.querySelector("#saved-status").textContent = "";
+        document.querySelector(".saved-meta").textContent = "";
+        mockFetch.mockReset();
+        jest.restoreAllMocks();
     });
 
-    const { loadSavedJobs } = await import("../saved.js");
-    await loadSavedJobs();
+    test("displays saved jobs returned by the API", async () => {
+        mockFetch.mockResolvedValue({
+            ok: true,
+            json: async () => [
+                {
+                    id: "1",
+                    position: "Frontend Developer",
+                    company: "Example Ltd",
+                    url: "https://example.com/job"
+                }
+            ]
+        });
 
-    expect(
-      document.querySelector(".job-card h3").textContent
-    ).toBe("Frontend Developer");
+        const { loadSavedJobs } = await import("../saved.js");
+        await loadSavedJobs();
 
-    expect(
-      document.querySelector(".saved-meta").textContent
-    ).toBe("1 saved");
-  });
+        expect(
+            document.querySelector(".job-card h3").textContent
+        ).toBe("Frontend Developer");
 
-  test("shows a message when there are no saved jobs", async () => {
-    mockFetch.mockResolvedValue({
-      ok: true,
-      json: async () => []
+        expect(
+            document.querySelector(".saved-meta").textContent
+        ).toBe("1 saved");
     });
 
-    const { loadSavedJobs } = await import("../saved.js");
-    await loadSavedJobs();
+    test("shows a message when there are no saved jobs", async () => {
+        mockFetch.mockResolvedValue({
+            ok: true,
+            json: async () => []
+        });
 
-    expect(
-      document.querySelector("#saved-status").textContent
-    ).toBe("You haven't saved any opportunities yet.");
+        const { loadSavedJobs } = await import("../saved.js");
+        await loadSavedJobs();
 
-    expect(
-      document.querySelector(".saved-meta").textContent
-    ).toBe("0 saved");
-  });
+        expect(
+            document.querySelector("#saved-status").textContent
+        ).toBe("You haven't saved any opportunities yet.");
 
-  test("shows an error when loading saved jobs fails", async () => {
-    mockFetch.mockResolvedValue({
-      ok: false
+        expect(
+            document.querySelector(".saved-meta").textContent
+        ).toBe("0 saved");
     });
 
-    const { loadSavedJobs } = await import("../saved.js");
-    const consoleSpy = jest
-      .spyOn(console, "error")
-      .mockImplementation(() => {});
+    test("shows an error when loading saved jobs fails", async () => {
+        mockFetch.mockResolvedValue({
+            ok: false
+        });
 
-    await loadSavedJobs();
+        const { loadSavedJobs } = await import("../saved.js");
+        const consoleSpy = jest
+            .spyOn(console, "error")
+            .mockImplementation(() => { });
 
-    expect(
-      document.querySelector("#saved-status").textContent
-    ).toBe("Unable to load saved opportunities. Please try again.");
+        await loadSavedJobs();
 
-    consoleSpy.mockRestore();
-  });
+        expect(
+            document.querySelector("#saved-status").textContent
+        ).toBe("Unable to load saved opportunities. Please try again.");
+
+        consoleSpy.mockRestore();
+    });
 });

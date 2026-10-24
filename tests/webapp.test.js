@@ -119,7 +119,7 @@ describe("Findora job listings", () => {
 
     const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {});
+      .mockImplementation(() => { });
 
     await app.displayJobs();
 
