@@ -1,6 +1,6 @@
 
 import { fetchRemoteJobs } from "./api.js";
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://findora-dev2-0.onrender.com";
 
 const jobsContainer = document.querySelector("#jobs-container");
 const statusMessage = document.querySelector("#status-message");

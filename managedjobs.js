@@ -1,5 +1,5 @@
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://findora-dev2-0.onrender.com";
 
 // PUT: Replace an existing managed opportunity
 export async function replaceManagedJob(id, jobData) {
