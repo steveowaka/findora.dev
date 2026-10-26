@@ -44,8 +44,16 @@
       "url": "https://remoteOK.com/remote-jobs/remote-travel-support-specialist-aisles-amp-abroad-1137559",
       "source": "Remote OK",
       "id": "mOJAsnalag4"
+    },
+    {
+      "remoteId": "1137571",
+      "position": "Senior Software Engineer",
+      "company": "Klardaten",
+      "location": "Location not specified",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-klardaten-1137571",
+      "source": "Remote OK",
+      "id": "hAC-xWW0rEY"
     }
   ],
-  "managedJobs": [],
-  "$schema": "./node_modules/json-server/schema.json"
+  "managedJobs": []
 }

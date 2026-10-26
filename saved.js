@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://findora-dev2-0.onrender.com";
 
 const savedJobsContainer = document.querySelector("#saved-jobs-container");
 const savedStatus = document.querySelector("#saved-status");
